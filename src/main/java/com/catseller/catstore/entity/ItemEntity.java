@@ -19,6 +19,7 @@ public class ItemEntity {
   private String itemStatus;
   private String name;
   private BigDecimal price;
+  private String imageUrl;
   @CreatedDate
   private LocalDateTime createdDate;
   @CreatedBy

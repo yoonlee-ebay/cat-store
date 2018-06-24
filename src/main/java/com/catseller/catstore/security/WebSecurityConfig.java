@@ -53,6 +53,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         .logout()
           .and()
         .authorizeRequests()
-          .antMatchers("/").hasRole("USER");
+          .antMatchers("/").permitAll();
   }
 }
