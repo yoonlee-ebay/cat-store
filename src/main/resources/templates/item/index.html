@@ -11,6 +11,7 @@
       <div class="col-xl-6">
         <h1 th:text="${item.name}">상품명</h1>
         <h3 th:text="${#numbers.formatCurrency(item.price)}">￦10,000</h3>
+        <a class="btn btn-primary btn-lg btn-block" th:href="@{|/orders/orderForm?itemId=${item.itemId}|}">주문하기</a>
       </div>
     </div>
   </div>

@@ -4,13 +4,17 @@
       layout:decorate="~{layout/layout}">
 <th:block layout:fragment="page_body">
   <div class="container">
-    <div class="row">
-      <div class="col-xl-6">
-        <img th:src="@{|/${item.imageUrl}|}" width="100%">
-      </div>
-      <div class="col-xl-6">
-        <h1 th:text="${item.name}">상품명</h1>
-        <h3 th:text="${#numbers.formatCurrency(item.price)}">￦10,000</h3>
+    <div class="my-3 p-3 bg-white rounded box-shadow">
+      <h6 class="border-bottom border-gray pb-2 mb-0">주문내역</h6>
+      <div class="media text-muted pt-3"
+           th:if="${not #lists.isEmpty(orders)}" th:each="order: ${orders}">
+        <img th:src="${order.item.imageUrl}" alt="" class="mr-2 rounded" width="32px" height="32px">
+        <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+          <div class="d-flex justify-content-between align-items-center w-100">
+            <strong class="d-block text-gray-dark" th:text="${order.item.name}">상품명</strong>
+          </div>
+          <span th:text="${order.address}">배송주소</span>
+        </div>
       </div>
     </div>
   </div>

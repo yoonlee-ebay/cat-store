@@ -60,3 +60,47 @@ INSERT INTO item_entity(
     'admin',
     now()
 );
+
+INSERT INTO order_entity(
+    order_id,
+    order_status,
+    address,
+    item_id,
+    member_id,
+    created_by,
+    created_date,
+    last_modified_by,
+    last_modified_date
+) VALUES (
+    null,
+    'ORDERED',
+    '서울특별시 강남구 테헤란로 어딘가',
+    1,
+    1,
+    'admin',
+    now(),
+    'admin',
+    now()
+);
+
+INSERT INTO order_entity(
+    order_id,
+    order_status,
+    address,
+    item_id,
+    member_id,
+    created_by,
+    created_date,
+    last_modified_by,
+    last_modified_date
+) VALUES (
+    null,
+    'ORDERED',
+    '서울특별시 강남구 테헤란로 어딘가2',
+    2,
+    1,
+    'admin',
+    now(),
+    'admin',
+    now()
+);

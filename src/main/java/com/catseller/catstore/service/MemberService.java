@@ -1,4 +1,9 @@
 package com.catseller.catstore.service;
 
-public class MemberService {
+import com.catseller.catstore.entity.MemberEntity;
+
+import java.util.Optional;
+
+public interface MemberService {
+  Optional<MemberEntity> findByEmail(String email);
 }
